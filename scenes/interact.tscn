@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://porfsfsgk27u"]
+
+[sub_resource type="GDScript" id="GDScript_gcgrg"]
+script/source = "extends Area2D
+
+func _on_body_entered(body: Node2D):
+	print(\"Entered\")
+"
+
+[node name="interact" type="Area2D"]
+script = SubResource("GDScript_gcgrg")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
